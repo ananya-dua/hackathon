@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment</title>
+  <link rel="stylesheet" href="style.css"> <!-- You can link your CSS file here -->
+  <style>
+    /* Additional CSS for styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: lightblue;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    select, textarea, input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      background-color: lightblue;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Book Appointment</h1>
+  </header>
+
+  <section>
+    <div class="container">
+      <form action="book_appointment.html" method="post">
+        <label for="doctor-type">Doctor Type:</label>
+        <select id="doctor-type" name="doctor-type">
+          <option value="general">General Physician</option>
+          <option value="dermatologist">Dermatologist</option>
+          <option value="cardiologist">Cardiologist</option>
+          <option value="dentist">Dentist</option>
+          <option value="pediatrician">Pediatrician</option>
+          <option value="orthopedic">Orthopedic Surgeon</option>
+          <!-- Add more options for different types of doctors -->
+        </select>
+
+        <label for="problem">Problem:</label>
+        <textarea id="problem" name="problem" rows="4" cols="50"></textarea>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time">
+
+        <button type="submit">Book Appointment</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Your Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rural Healthcare Initiative</title>
+  <title>CarePulse</title>
   <style>
     /* Reset CSS */
     * {
@@ -27,10 +27,36 @@
     }
 
     header {
-      background-color: lightseagreen; /* Light sea green background color */
+      background-image: url('carepulse.jpg'); /* Background image */
+      background-size: cover; /* Cover the entire header */
       color: black; /* Black font color */
-      padding: 10px 0;
+      padding: 40px 0; /* Increased padding for the header */
       text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 48px; /* Increased font size for the header */
+      margin-bottom: 20px; /* Added margin at the bottom */
+    }
+
+    .login-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .login-box a {
+      color: black; /* Black text color */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-box a:hover {
+      text-decoration: underline;
     }
 
     nav ul {
@@ -48,10 +74,14 @@
     }
 
     section {
-      padding: 40px 0;
+      padding: 20px 0; /* Reduced padding between sections */
     }
 
     section h2 {
+      margin-bottom: 20px;
+    }
+
+    section p {
       margin-bottom: 20px;
     }
 
@@ -61,11 +91,18 @@
       padding: 20px 0;
       text-align: center;
     }
+
+    .testimonial {
+      margin-bottom: 30px; /* Add space between testimonials */
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Rural Healthcare Initiative</h1>
+    <h1>CarePulse</h1>
+    <div class="login-box">
+      <a href="login.html">Login</a>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -74,7 +111,7 @@
         <li><a href="health_screenings.html">Health Screenings</a></li>
         <li><a href="preventive_care.html">Preventive Care</a></li>
         <li><a href="emergency_medical_assistance.html">Emergency Medical Assistance</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contactus.html">Contact</a></li> <!-- Added link to Contact Us page -->
       </ul>
     </nav>
   </header>
@@ -86,22 +123,23 @@
     </div>
   </section>
 
-  <section id="services">
+  <section id="testimonials">
     <div class="container">
-      <h2>Our Services</h2>
-      <ul>
-        <li><a href="doctor_home_visits.html">Doctor Home Visits</a></li>
-        <li><a href="medical_consultations.html">Medical Consultations</a></li>
-        <li><a href="health_screenings.html">Health Screenings</a></li>
-        <li><a href="preventive_care.html">Preventive Care</a></li>
-        <li><a href="emergency_medical_assistance.html">Emergency Medical Assistance</a></li>
-      </ul>
+      <h2>Testimonials</h2>
+      <blockquote class="testimonial">
+        <p>"CarePulse has been a lifesaver for me. The convenience of having a doctor come to my home has made managing my health so much easier."</p>
+        <cite>- Ravi Singh</cite>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"I highly recommend CarePulse to anyone living in a rural area. The services they provide are invaluable."</p>
+        <cite>- Deepa Shetty</cite>
+      </blockquote>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>&copy; 2024 Rural Healthcare Initiative. All rights reserved.</p>
+      <p>&copy; 2024 CarePulse. All rights reserved.</p>
     </div>
   </footer>
 </body>

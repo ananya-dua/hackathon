@@ -1,125 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - CarePulse</title>
-  <style>
-    /* Reset CSS */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <link rel="stylesheet" href="style.css">
 
-    /* Global Styles */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: paleturquoise; /* Pale turquoise background color */
-      color: black; /* Black text color */
-    }
+ 
+  <link rel="stylesheet" href="index.css">
 
-    .container {
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, 
+						initial-scale=1.0">
+	<title>CarePulse</title>
 
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    input[type="text"],
-    input[type="password"],
-    select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-
-    input[type="submit"] {
-      background-color: dodgerblue; /* Dodger blue background color */
-      color: white; /* White text color */
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    input[type="submit"]:hover {
-      background-color: deepskyblue; /* Deep sky blue background color */
-    }
-  </style>
 </head>
-<body>
-  <div class="container">
-    <h2>Login</h2>
-    <form action="#">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="age">Age</label>
-      <input type="text" id="age" name="age" required>
 
-      <label for="address">Address</label>
-      <input type="text" id="address" name="address" required>
-      
-      <label for="pincode">Pincode</label>
-      <input type="text" id="pincode" name="pincode" required>
-      
-      <label for="dob">Date of Birth</label>
-      <input type="text" id="dob" name="dob" required>
-      
-      <label for="gender">Gender</label>
-      <select id="gender" name="gender" required>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
-      
-      <label for="phone">Phone Number</label>
-      <input type="text" id="phone" name="phone" required>
-      
-      <label for="emergency_contact">Emergency Contact Name</label>
-      <input type="text" id="emergency_contact" name="emergency_contact" required>
-      
-      <label for="allergies">Allergies</label>
-      <input type="text" id="allergies" name="allergies" required>
-      
-      <label for="primary_healthcare_provider">Primary Healthcare Provider</label>
-      <input type="text" id="primary_healthcare_provider" name="primary_healthcare_provider" required>
-      
-      <label for="health_insurance_provider">Health Insurance Provider</label>
-      <input type="text" id="health_insurance_provider" name="health_insurance_provider" required>
-      
-      <label for="policy_number">Policy Number</label>
-      <input type="text" id="policy_number" name="policy_number" required>
-      
-      <label for="medical_conditions">Medical Conditions</label>
-      <input type="text" id="medical_conditions" name="medical_conditions" required>
-      
-      <label for="medications">Medications Currently Taken</label>
-      <input type="text" id="medications" name="medications" required>
-      
-      <label for="last_medical_checkup">Last Medical Checkup</label>
-      <input type="text" id="last_medical_checkup" name="last_medical_checkup" required>
-      
-      <input type="submit" value="Login">
-    </form>
-  </div>
+<body>
+	<header>
+		<h1 class="heading">CarePulse</h1>
+		<h3 class="title">Your Health...Our Priority</h3>
+	</header>
+
+	<!-- container div -->
+	<div class="container">
+
+		<!-- upper button section to select
+			the login or signup form -->
+		<div class="slider"></div>
+		<div class="btn">
+			<button class="login">Login</button>
+			<button class="signup">Signup</button>
+		</div>
+
+		<!-- Form section that contains the
+			login and the signup form -->
+		<div class="form-section">
+
+			<!-- login form -->
+			<div class="login-box">
+				<input type="email"
+					class="email ele"
+					placeholder="username">
+				<input type="password"
+					class="password ele"
+					placeholder="password">
+				<button class="clkbtn">Login</button>
+			</div>
+
+			<!-- signup form -->
+			<div class="signup-box">
+        <input type="text" class="last-name ele" placeholder="Name" required>
+        <input type="number" class="age ele" placeholder="Age" required>
+        <input type="text" class="address ele" placeholder="Address" required>
+        <input type="text" class="pincode ele" placeholder="Pincode" required>
+        <select class="gender ele" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+
+        <input type="tel" class="phone-num ele" placeholder="Phone Number" required>
+
+        <input type="text" class="emergency-contact-name ele" placeholder="Emergency Contact Name" required>
+        <input type="tel" class="emergency-contact-num ele" placeholder="Emergency Contact Number" required>
+        <input type="text" class="allergies ele" placeholder="Allergies">
+        <input type="text" class="primary-healthcare ele" placeholder="Primary Healthcare Provider">
+        <input type="text" class="health-insurance ele" placeholder="Yeshasvini Health Insurance Card Number">
+        <input type="text" class="medications ele" placeholder="Medications Currently Taken">
+        <input type="text" class="username ele" placeholder="Username" required>
+        <input type="password" class="password ele" placeholder="Password" required>
+        <input type="text" class="confirm-password ele" placeholder="Aadhar Number" required>
+        
+    
+				<button class="clkbtn">Signup</button>
+      </div>
+
+			</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+  <footer>
+    <div class="footer container">
+      <p>&copy; 2024 CarePulse. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospitals We Are Associated With</title>
+  <link rel="stylesheet" href="style.css"> <!-- You can link your CSS file here -->
+  <style>
+    /* CSS code to reduce the size of the images */
+    .carousel-container {
+      text-align: center; /* Center-align hospital names */
+    }
+
+    .carousel-container h2 {
+      margin-bottom: 10px; /* Add space between hospital names and images */
+    }
+
+    .carousel {
+      display: inline-block;
+      white-space: nowrap;
+      transition: transform 0.5s ease-in-out;
+      margin-bottom: 20px; /* Add space between carousels */
+    }
+
+    .carousel img {
+      max-width: 25%; /* Reduce the size by 25% */
+      height: auto;
+      cursor: pointer; /* Add cursor pointer */
+    }
+
+    /* Ensure the second and third images in Udupi Hospitals carousel have the same size as the first */
+    #udupi-carousel img:nth-child(2),
+    #udupi-carousel img:nth-child(3) {
+      max-width: 25%; /* Set the same size as the first image */
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <h1>Our Hospitals</h1>
+        <nav>
+          <ul>
+            <li><a href="hospitals_we_are_associated_with.html">Our Hospitals</a></li>
+            <li><a href="medical_consultations.html">Medical Consultations</a></li>
+            <li><a href="health_screenings.html">Health Screenings</a></li>
+            <li><a href="doctor_home_visits.html">Doctor Home Visits</a></li>
+            <li><a href="emergency_medical_assistance.html">Emergency Medical Assistance</a></li>
+          </ul>
+        </nav>
+        <div class="header-buttons">
+          <a class="book-appointment-button" href="#">Book Appointment</a>
+          <a class="login-button" href="login.html">Login</a>
+        </div>
+      </header>
+
+  <section>
+    <!-- Manipal Hospital Carousel -->
+    <div class="carousel-container" onmouseover="startSlide('manipal-carousel')" onmouseout="stopSlide('manipal-carousel')">
+      <h2>Manipal Hospitals</h2>
+      <div class="carousel" id="manipal-carousel">
+        <img src="m1.jpg" alt="Manipal Hospital 1">
+        <img src="m2.jpg" alt="Manipal Hospital 2">
+        <img src="m3.jpg" alt="Manipal Hospital 3">
+      </div>
+    </div>
+
+    <!-- Gokarna Hospital Carousel -->
+    <div class="carousel-container" onmouseover="startSlide('gokarna-carousel')" onmouseout="stopSlide('gokarna-carousel')">
+      <h2>Gokarna Hospitals</h2>
+      <div class="carousel" id="gokarna-carousel">
+        <img src="g1.jpg" alt="Gokarna Hospital 1">
+        <img src="g2.jpg" alt="Gokarna Hospital 2">
+        <img src="g3.jpg" alt="Gokarna Hospital 3">
+      </div>
+    </div>
+
+    <!-- Udupi Hospital Carousel -->
+    <div class="carousel-container" onmouseover="startSlide('udupi-carousel')" onmouseout="stopSlide('udupi-carousel')">
+      <h2>Udupi Hospitals</h2>
+      <div class="carousel" id="udupi-carousel">
+        <img src="u1.jpg" alt="Udupi Hospital 1">
+        <img src="u2.jpg" alt="Udupi Hospital 2">
+        <img src="u3.jpg" alt="Udupi Hospital 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- You can add more sections or content as required -->
+
+  
+  <script>
+    // JavaScript code for carousel effect
+    let interval;
+
+    function startSlide(carouselId) {
+      const carousel = document.getElementById(carouselId);
+      const slideWidth = carousel.firstElementChild.clientWidth;
+      let position = 0;
+
+      interval = setInterval(() => {
+        position -= slideWidth;
+        if (position < -slideWidth * (carousel.children.length - 1)) {
+          position = 0;
+        }
+        carousel.style.transform = `translateX(${position}px)`;
+      }, 1000);
+    }
+
+    function stopSlide(carouselId) {
+      clearInterval(interval);
+    }
+  </script>
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Your Organization. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

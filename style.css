@@ -1,0 +1,130 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f0f0f0; /* Light gray background color */
+      color: black; /* Black text color */
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background-image: url('img.jpg'); /* Background image */
+      background-size: cover; /* Cover the entire header */
+      color: black; /* Black font color */
+      padding: 40px 20px; /* Increased padding for the header */
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 48px; /* Increased font size for the header */
+      margin-bottom: 20px; /* Added margin at the bottom */
+    }
+
+    nav {
+      position: absolute;
+      top: 90%;
+      left: 25%;
+      transform: translateY(-50%);
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: black; /* Black font color */
+      text-decoration: none;
+    }
+
+    .login-button {
+      position: absolute;
+      top: 20px; /* Adjust button's top position */
+      right: 20px; /* Adjust button's right position */
+      background-color: white; /* White background color */
+      color: black; /* Black text color */
+      padding: 10px 20px; /* Padding for the button */
+      border: 2px solid black; /* Black border */
+      border-radius: 5px; /* Rounded corners */
+      text-decoration: none; /* Remove default link underline */
+    }
+
+    .login-button:hover {
+      background-color: black; /* Black background color on hover */
+      color: white; /* White text color on hover */
+    }
+
+    .services {
+      text-align: center; /* Center align services */
+      position: absolute; /* Position at the bottom of the header */
+      bottom: 20px; /* Adjust bottom margin */
+      left: 50%; /* Align horizontally */
+      transform: translateX(-50%); /* Center horizontally */
+    }
+
+    .services ul {
+      list-style: none;
+    }
+
+    .services ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .services ul li a {
+      color: black; /* Black font color */
+      text-decoration: none;
+    }
+
+    section {
+      padding: 20px 0; /* Reduced padding between sections */
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+    }
+
+    section p {
+      margin-bottom: 20px;
+    }
+
+    .testimonial {
+      margin-bottom: 30px; /* Add space between testimonials */
+    }
+
+    .contact-info {
+      margin-top: 20px; /* Add space between testimonials and contact info */
+      text-align: center;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-info ul li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: lightseagreen; /* Match header background color */
+      color: black; /* Black font color */
+      padding: 20px 0;
+      text-align: center;
+    }
